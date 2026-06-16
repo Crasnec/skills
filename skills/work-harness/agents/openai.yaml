@@ -1,0 +1,7 @@
+interface:
+  display_name: "Work Harness"
+  short_description: "Run long tasks with checkpoints"
+  default_prompt: "Use $work-harness to run this task with explicit checkpoints, before/after evaluation, and continue/adjust/back/pause decisions."
+
+policy:
+  allow_implicit_invocation: true

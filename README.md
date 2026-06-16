@@ -22,6 +22,10 @@ Counterfactual decision review for comparing a current choice, plan, architectur
 
 Work checkpoint scaffold for active tasks. It helps Codex compare before/after state, judge whether the direction is improving, and decide whether to continue, adjust, BACK/backtrack, or pause before compounding a wrong turn.
 
+### work-harness
+
+Execution harness for long-running or iterative agent work. It wraps a task with a starting contract, before/after checkpoints, continue/adjust/BACK/pause decisions, and a final audit.
+
 ## Repository Layout
 
 ```text
@@ -35,6 +39,10 @@ skills/
     agents/
       openai.yaml
   course-correct/
+    SKILL.md
+    agents/
+      openai.yaml
+  work-harness/
     SKILL.md
     agents/
       openai.yaml
@@ -62,6 +70,12 @@ python3 /home/adjustedmin/.codex/skills/.system/skill-installer/scripts/install-
   --path skills/course-correct
 ```
 
+```bash
+python3 /home/adjustedmin/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo Crasnec/skills \
+  --path skills/work-harness
+```
+
 Install all:
 
 ```bash
@@ -69,14 +83,15 @@ python3 /home/adjustedmin/.codex/skills/.system/skill-installer/scripts/install-
   --repo Crasnec/skills \
   --path skills/elicitation-two-pass \
   --path skills/compare-alternatives \
-  --path skills/course-correct
+  --path skills/course-correct \
+  --path skills/work-harness
 ```
 
 Or use a GitHub URL:
 
 ```bash
 python3 /home/adjustedmin/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --url https://github.com/Crasnec/skills/tree/main/skills/course-correct
+  --url https://github.com/Crasnec/skills/tree/main/skills/work-harness
 ```
 
 Restart Codex after installation.
@@ -86,3 +101,5 @@ Restart Codex after installation.
 Use `elicitation-two-pass` for first-pass decision support. Use `compare-alternatives` when the user wants to know what another choice would have changed. If the user wants a deeper, document-backed decision review, follow up with `grill-with-docs`.
 
 Use `course-correct` during active work when the next question is whether to continue, adjust, backtrack, or pause.
+
+Use `work-harness` when the whole task should run through explicit checkpoints and final audit.
