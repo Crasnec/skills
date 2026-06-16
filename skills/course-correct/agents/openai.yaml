@@ -1,0 +1,7 @@
+interface:
+  display_name: "Course Correct"
+  short_description: "Checkpoint work and decide continue or back"
+  default_prompt: "Use $course-correct to review progress, compare the before/after state, and decide whether to continue, adjust, backtrack, or pause."
+
+policy:
+  allow_implicit_invocation: true
