@@ -1,11 +1,13 @@
 ---
 name: compare-alternatives
-description: Counterfactual decision review for comparing a current choice, plan, architecture, product direction, policy, or past decision against plausible alternatives. Use when the user asks what another choice would have been like, whether they should switch, whether a past decision was good, what tradeoffs they missed, or how to compare options before committing.
+description: Counterfactual decision review for committed or near-committed choices. Use when the user asks "what if we chose differently", "was this the right choice", "should we switch", "what did we miss", "compare this path against alternatives", or asks about regret, sunk cost, opportunity cost, reversibility, migration, rollback, or decision postmortems. Avoid for ordinary first-pass recommendations, simple option lists, or broad elicitation; use elicitation-two-pass for underspecified high-impact planning before a path exists.
 ---
 
 # Compare Alternatives
 
-Use this skill when the user wants to examine "what if we chose differently" or compare a current path with alternatives. The goal is not to list generic pros and cons. The goal is to help the user understand decision quality, opportunity cost, switching cost, reversibility, and what evidence would change the recommendation.
+Use this skill when the user wants to examine "what if we chose differently" or compare a current, favored, or past path with alternatives. The goal is not to list generic pros and cons. The goal is to help the user understand decision quality, opportunity cost, switching cost, reversibility, and what evidence would change the recommendation.
+
+Do not use this skill merely because the user asks for an initial recommendation among options. Use it when there is a current/default/favored/past choice to test against alternatives, or when the user is explicitly asking about counterfactuals, switching, regret, missed tradeoffs, or postmortem learning.
 
 Do not pretend the counterfactual is knowable. Separate supported inference from speculation.
 
