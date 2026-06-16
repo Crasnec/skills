@@ -1,0 +1,7 @@
+interface:
+  display_name: "Compare Alternatives"
+  short_description: "Compare choices and counterfactual paths"
+  default_prompt: "Use $compare-alternatives to compare the current choice against plausible alternatives and decide whether to hold, switch, pilot, or revisit later."
+
+policy:
+  allow_implicit_invocation: true
