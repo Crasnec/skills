@@ -1,0 +1,7 @@
+interface:
+  display_name: "Elicitation Two-Pass"
+  short_description: "Decision support for underspecified requests"
+  default_prompt: "Use $elicitation-two-pass to identify the key tradeoffs, baseline controls, external checks, and validation steps for this request."
+
+policy:
+  allow_implicit_invocation: true
