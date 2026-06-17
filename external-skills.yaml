@@ -1,0 +1,12 @@
+external_skills:
+  - name: grill-with-docs
+    repo: mattpocock/skills
+    ref: main
+    upstream_path: skills/engineering/grill-with-docs
+    local_path: skills/grill-with-docs
+    copyright: "Copyright (c) 2026 Matt Pocock"
+    license_url: https://github.com/mattpocock/skills/blob/main/LICENSE
+    files:
+      - SKILL.md
+      - CONTEXT-FORMAT.md
+      - ADR-FORMAT.md

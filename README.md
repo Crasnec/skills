@@ -113,6 +113,36 @@ python3 /home/adjustedmin/.codex/skills/.system/skill-installer/scripts/install-
 
 Restart Codex after installation.
 
+## External Skill Sync
+
+External skills copied from other repositories are declared in
+[`external-skills.yaml`](./external-skills.yaml). The sync script only manages
+files listed in that manifest. Repo-owned wrapper files such as
+`agents/openai.yaml` are intentionally left untouched.
+
+List managed external skills:
+
+```bash
+python3 scripts/sync-external-skills.py list
+```
+
+Check whether vendored files match upstream:
+
+```bash
+python3 scripts/sync-external-skills.py check
+python3 scripts/sync-external-skills.py check grill-with-docs
+```
+
+Update one external skill, or all external skills:
+
+```bash
+python3 scripts/sync-external-skills.py update grill-with-docs
+python3 scripts/sync-external-skills.py update all
+```
+
+After an update, review the diff and keep
+[`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md) aligned with the manifest.
+
 ## Follow-Up Workflow
 
 Use `elicitation-two-pass` for first-pass decision support. Use `compare-alternatives` when the user wants to know what another choice would have changed. If the user wants a deeper, document-backed decision review, follow up with `grill-with-docs`.
