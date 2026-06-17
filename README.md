@@ -123,6 +123,8 @@ Use `work-harness` when the whole task should run through explicit checkpoints a
 
 Use `grill-with-docs` when a plan needs deeper review against repository documentation and domain language.
 
-## License
+## Copyright And Provenance
 
-MIT License. Copyright (c) 2026 Crasnec.
+No project-wide `LICENSE` file is included.
+
+`grill-with-docs` is copied from `mattpocock/skills`; see [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) for upstream copyright and provenance.
